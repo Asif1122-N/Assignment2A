@@ -1,6 +1,6 @@
 from node import SearchNode
 
 
-def cus1(graph):
+def astar(graph):
     
     return None, None, set()

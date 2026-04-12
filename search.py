@@ -1,16 +1,72 @@
+import sys
+
 from parser import parse_file
 from graph import Graph
 
-nodes, edges, origin, destinations = parse_file("test_cases/test1.txt")
+# Try argument 1 from the command-line arguments and assign it to input_file.
+try:
+    input_file = sys.argv[1]
+except IndexError:
+    # Default to test1.txt if no argument is provided.
+    input_file = "test_cases/test1.txt"
+
+nodes, edges, origin, destinations = parse_file(input_file)
 graph = Graph(nodes, edges, origin, destinations)
 
-from node import SearchNode
+# Try argument 2 from the command-line arguments and assign it to search_algorithm.
+try:
+    search_algorithm = sys.argv[2]
+except IndexError:
+    # Default to DFS if no argument is provided.
+    search_algorithm = "dfs"
 
-start = SearchNode(state=2)
-child = SearchNode(state=3, parent=start, cost=4, depth=1)
+from algorithms.bfs import bfs
+from algorithms.dfs import dfs
+from algorithms.gbfs import gbfs
+from algorithms.astar import astar
+from algorithms.cus1 import cus1
+from algorithms.cus2 import cus2
 
-print("Start state:", start.state)
-print("Child state:", child.state)
-print("Child parent:", child.parent.state)
-print("Child cost:", child.cost)
-print("Child depth:", child.depth)
+# Selects the search algorithm
+if search_algorithm == "bfs":
+    goal, number_of_nodes, path = bfs(graph)
+
+elif search_algorithm == "dfs":
+    goal, number_of_nodes, path = dfs(graph)
+
+elif search_algorithm == "gbfs":
+    goal, number_of_nodes, path = gbfs(graph)
+
+elif search_algorithm == "astar":
+    goal, number_of_nodes, path = astar(graph)
+
+elif search_algorithm == "cus1":
+    goal, number_of_nodes, path = cus1(graph)
+
+elif search_algorithm == "cus2":
+    goal, number_of_nodes, path = cus2(graph)
+
+# Print the results
+if goal is None:
+    print("No solution found.")
+else:
+    print(input_file + " " + search_algorithm)
+    print(str(goal) + " " + str(number_of_nodes))
+
+    for i in range(len(path) - 1):
+        if path[i] != goal:
+            print(str(path[i]) + " -> " + str(path[i + 1]))
+        else:
+            print(str(path[i]))
+
+
+
+# OLD TEST CODE
+#start = SearchNode(state=2)
+#child = SearchNode(state=3, parent=start, cost=4, depth=1)
+
+#print("Start state:", start.state)
+#print("Child state:", child.state)
+#print("Child parent:", child.parent.state)
+#print("Child cost:", child.cost)
+#print("Child depth:", child.depth)
