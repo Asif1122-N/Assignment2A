@@ -17,7 +17,7 @@ graph = Graph(nodes, edges, origin, destinations)
 try:
     search_algorithm = sys.argv[2]
 except IndexError:
-    # Default to DFS if no argument is provided.
+    # Default to dfs if no argument is provided.
     search_algorithm = "dfs"
 
 from algorithms.bfs import bfs
@@ -51,7 +51,7 @@ if goal is None:
     print("No solution found.")
 else:
     print(input_file + " " + search_algorithm)
-    print(str(goal) + " " + str(number_of_nodes))
+    print("Goal: " + str(goal) + " #Nodes: " + str(number_of_nodes))
 
     for i in range(len(path) - 1):
         if path[i] != goal:

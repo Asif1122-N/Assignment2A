@@ -1,17 +1,15 @@
 from node import SearchNode
+from utils import reconstruct_path
 
 def dfs(graph):
     visited = set()
-    path = []
     origin = SearchNode(state=graph.origin)
     
     # Recursive function to perform DFS.
     def expand(node):
         visited.add(node.state)
-        path.append(node.state)
-
         if graph.is_goal(node.state):
-            return node.state, node.depth, path
+            return node.state, node.depth, reconstruct_path(node)
 
         for neighbor_id, cost in graph.get_neighbors(node.state):
             if neighbor_id not in visited:
@@ -20,7 +18,6 @@ def dfs(graph):
                 if result is not None:
                     return result
 
-        path.pop()
         return None
 
 
@@ -28,5 +25,5 @@ def dfs(graph):
     if result is not None:
         return result
 
-    return None, None, path
+    return None, None, []
 
