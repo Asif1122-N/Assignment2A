@@ -28,7 +28,7 @@ def astar(graph):
             child = frontier.pop(0)
             result = expand(child)
             if result is not None:
-                    return result
+                return result
         
 
         return None
