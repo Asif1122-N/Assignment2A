@@ -50,7 +50,7 @@ def cus2(graph):
             if next_node.state not in visited:
                 result = expand(next_node)
                 if result is not None:
-        return result
+                    return result
 
         return None
 

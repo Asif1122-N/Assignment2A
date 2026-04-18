@@ -18,7 +18,7 @@ try:
     search_algorithm = sys.argv[2]
 except IndexError:
     # Default to dfs if no argument is provided.
-    search_algorithm = "dfs"
+    search_algorithm = "DFS"
 
 from algorithms.bfs import bfs
 from algorithms.dfs import dfs
@@ -28,22 +28,22 @@ from algorithms.cus1 import cus1
 from algorithms.cus2 import cus2
 
 # Selects the search algorithm
-if search_algorithm == "bfs":
+if search_algorithm == "BFS":
     goal, number_of_nodes, path = bfs(graph)
 
-elif search_algorithm == "dfs":
+elif search_algorithm == "DFS":
     goal, number_of_nodes, path = dfs(graph)
 
-elif search_algorithm == "gbfs":
+elif search_algorithm == "GBFS":
     goal, number_of_nodes, path = gbfs(graph)
 
-elif search_algorithm == "astar":
+elif search_algorithm == "AS":
     goal, number_of_nodes, path = astar(graph)
 
-elif search_algorithm == "cus1":
+elif search_algorithm == "CUS1":
     goal, number_of_nodes, path = cus1(graph)
 
-elif search_algorithm == "cus2":
+elif search_algorithm == "CUS2":
     goal, number_of_nodes, path = cus2(graph)
 
 # Print the results
@@ -51,7 +51,7 @@ if goal is None:
     print("No solution found.")
 else:
     print(input_file + " " + search_algorithm)
-    print("Goal: " + str(goal) + " #Nodes: " + str(number_of_nodes))
+    print(str(goal) + " " + str(number_of_nodes))
 
     for i in range(len(path) - 1):
         if path[i] != goal:

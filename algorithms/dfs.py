@@ -9,7 +9,7 @@ def dfs(graph):
     def expand(node):
         visited.add(node.state)
         if graph.is_goal(node.state):
-            return node.state, node.depth, reconstruct_path(node)
+            return node.state, len(visited), reconstruct_path(node)
 
         for neighbor_id, cost in graph.get_neighbors(node.state):
             if neighbor_id not in visited:
