@@ -50,25 +50,24 @@ elif search_algorithm == "CUS2":
 if goal is None:
     print("No solution found.")
 else:
-    print("## Test: " + f"{input_file}" + " - Method: " + f"{search_algorithm}")
+
     print(f"{input_file} {search_algorithm}")
     print(f"{goal} {number_of_nodes}")
     print("[" + ", ".join(map(str, path)) + "]")
 
-    #for i in range(len(path) - 1):
+    # for i in range(len(path) - 1):
     #    if path[i] != goal:
     #        print(str(path[i]) + " -> " + str(path[i + 1]))
     #    else:
     #        print(str(path[i]))
 
 
-
 # OLD TEST CODE
-#start = SearchNode(state=2)
-#child = SearchNode(state=3, parent=start, cost=4, depth=1)
+# start = SearchNode(state=2)
+# child = SearchNode(state=3, parent=start, cost=4, depth=1)
 
-#print("Start state:", start.state)
-#print("Child state:", child.state)
-#print("Child parent:", child.parent.state)
-#print("Child cost:", child.cost)
-#print("Child depth:", child.depth)
+# print("Start state:", start.state)
+# print("Child state:", child.state)
+# print("Child parent:", child.parent.state)
+# print("Child cost:", child.cost)
+# print("Child depth:", child.depth)
