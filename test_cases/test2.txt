@@ -1,3 +1,5 @@
+Complex graph with multiple paths and cycles
+
 Nodes:
 1: (0,0)
 2: (2,0)
