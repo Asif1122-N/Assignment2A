@@ -50,14 +50,16 @@ elif search_algorithm == "CUS2":
 if goal is None:
     print("No solution found.")
 else:
-    print(input_file + " " + search_algorithm)
-    print(str(goal) + " " + str(number_of_nodes))
+    print("## Test: " + f"{input_file}" + " - Method: " + f"{search_algorithm}")
+    print(f"{input_file} {search_algorithm}")
+    print(f"{goal} {number_of_nodes}")
+    print("[" + ", ".join(map(str, path)) + "]")
 
-    for i in range(len(path) - 1):
-        if path[i] != goal:
-            print(str(path[i]) + " -> " + str(path[i + 1]))
-        else:
-            print(str(path[i]))
+    #for i in range(len(path) - 1):
+    #    if path[i] != goal:
+    #        print(str(path[i]) + " -> " + str(path[i + 1]))
+    #    else:
+    #        print(str(path[i]))
 
 
 

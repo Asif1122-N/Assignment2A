@@ -1,0 +1,24 @@
+test_cases/test11.txt DFS
+3 3
+[1, 2, 3]
+
+test_cases/test11.txt BFS
+3 5
+[1, 2, 3]
+
+test_cases/test11.txt GBFS
+3 3
+[1, 2, 3]
+
+test_cases/test11.txt AS
+3 3
+[1, 2, 3]
+
+test_cases/test11.txt CUS1
+3 5
+[1, 2, 3]
+
+test_cases/test11.txt CUS2
+3 4
+[1, 2, 3]
+

@@ -1,0 +1,24 @@
+test_cases/test2.txt DFS
+4 1
+[4]
+
+test_cases/test2.txt BFS
+4 1
+[4]
+
+test_cases/test2.txt GBFS
+4 1
+[4]
+
+test_cases/test2.txt AS
+4 1
+[4]
+
+test_cases/test2.txt CUS1
+4 1
+[4]
+
+test_cases/test2.txt CUS2
+4 1
+[4]
+

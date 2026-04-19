@@ -1,0 +1,24 @@
+test_cases/test14.txt DFS
+6 6
+[1, 2, 3, 4, 5, 6]
+
+test_cases/test14.txt BFS
+6 6
+[1, 2, 3, 4, 5, 6]
+
+test_cases/test14.txt GBFS
+6 6
+[1, 2, 3, 4, 5, 6]
+
+test_cases/test14.txt AS
+6 6
+[1, 2, 3, 4, 5, 6]
+
+test_cases/test14.txt CUS1
+6 16
+[1, 2, 3, 4, 5, 6]
+
+test_cases/test14.txt CUS2
+6 6
+[1, 2, 3, 4, 5, 6]
+

@@ -1,0 +1,24 @@
+test_cases/test8.txt DFS
+None None
+[]
+
+test_cases/test8.txt BFS
+None 3
+[]
+
+test_cases/test8.txt GBFS
+None None
+[]
+
+test_cases/test8.txt AS
+None None
+[]
+
+test_cases/test8.txt CUS1
+None 100
+[]
+
+test_cases/test8.txt CUS2
+None 3
+[]
+

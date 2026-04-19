@@ -4,6 +4,10 @@ from utils import reconstruct_path
 
 
 def dls(node, graph, limit, generated_nodes):
+    
+    if node.state is None:
+        return None, generated_nodes
+    
     # Goal test
     if graph.is_goal(node.state):
         return node, generated_nodes
@@ -34,12 +38,13 @@ def dls(node, graph, limit, generated_nodes):
     return None, generated_nodes
 
 def cus1(graph):
+    
     origin = graph.origin
-
     generated_nodes = 1
     depth_limit = 0
+    MAX_DEPTH = 50
 
-    while True:
+    while depth_limit <= MAX_DEPTH:
         root = SearchNode(state = origin, cost = 0, depth = 0)
 
         result, generated_nodes = dls(root, graph, depth_limit, generated_nodes)
@@ -48,4 +53,6 @@ def cus1(graph):
             return result.state, generated_nodes, reconstruct_path(result)
         
         depth_limit += 1
+    
+    return None, generated_nodes, []
 
