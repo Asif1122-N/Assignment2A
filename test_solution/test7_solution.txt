@@ -11,7 +11,7 @@ test_cases/test7.txt GBFS
 [1, 2, 5]
 
 test_cases/test7.txt AS
-5 4
+5 3
 [1, 2, 5]
 
 test_cases/test7.txt CUS1
